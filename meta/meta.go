@@ -14,7 +14,7 @@ type Meta struct {
 func New(page, perPage, total int, pagLimDef string) (*Meta, error) {
 	if perPage <= 0 {
 		var err error
-		perPage, err = strconv.Atoi("pagLimDef")
+		perPage, err = strconv.Atoi(pagLimDef)
 		if err != nil {
 			return nil, err
 		}
